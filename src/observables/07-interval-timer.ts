@@ -15,8 +15,7 @@ const interval$ = interval(1000);
 // const timer$    = timer(2000, 1000 );
 const timer$    = timer( todayIn5 );
 
-
-console.log('Inicio');
+console.log('start');
 // interval$.subscribe( observer );
 timer$.subscribe( observer )
-console.log('Fin');
+console.log('End');
