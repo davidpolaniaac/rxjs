@@ -1,20 +1,8 @@
-import { fromEvent } from 'rxjs';
+import { asyncScheduler, of, range } from 'rxjs';
 
-/**
- * Eventos del DOM
- */
-const src1$ = fromEvent<MouseEvent>( document, 'click');
-const src2$ = fromEvent<KeyboardEvent>( document, 'keyup');
+// const src$ = of(1,2,3,4,5);
+const src$ = range(1,5, asyncScheduler);
 
-const observer = {
-    next: val => console.log('next', val )
-};
-
-src1$.subscribe( ({ x, y }) => {
-    console.log(x,y);
-});
-
-
-src2$.subscribe( evento => {
-    console.log( evento.key );
-});
+console.log('start');
+src$.subscribe( console.log );
+console.log('end');
