@@ -17,7 +17,7 @@ const keyupPluck$ = keyup$.pipe(
 );
 
 const keyupMapTo$ = keyup$.pipe(
-    mapTo('standard')
+    mapTo('Tecla presionada')
 );
 
 
