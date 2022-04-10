@@ -1,11 +1,1 @@
-import { auditTime, map, tap } from 'rxjs/operators';
-
-import { fromEvent } from 'rxjs';
-
-const click$ = fromEvent<MouseEvent>( document, 'click');
-
-click$.pipe(
-    map( ({ x }) => x ),
-    tap(val => console.log('tap', val) ),
-    auditTime(5000)
-).subscribe( console.log );
+import './combination/07-forkJoin-lab'
