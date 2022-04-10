@@ -1,1 +1,1 @@
-import './combination/07-forkJoin-lab'
+import './exercise-solution/06-luke-skywalker'
